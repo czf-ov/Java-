@@ -1,4 +1,4 @@
-浏览器中的日期格式是2019-10-01，而SpringMvc中的日期格式是2019/10/01，所以将SpringMvc中的日期格式转换为yyyy-MM-dd即可。
+//浏览器中的日期格式是2019-10-01，而SpringMvc中的日期格式是2019/10/01，所以将SpringMvc中的日期格式转换为yyyy-MM-dd即可。
 @InitBinder
 	public void InitDate(ServletRequestDataBinder binder) {
 		binder.registerCustomEditor(Date.class, new CustomDateEditor(new SimpleDateFormat("yyyy-MM-dd"), true));
